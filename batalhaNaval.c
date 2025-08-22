@@ -77,6 +77,8 @@ int main() {
             printf("\n");
         }
 
+        printf("\n");
+        
         /*     Exemplo da Saída Esperada / Exibição da Habilidade 
 
           // 0 3 0 0 0 0 0 0 0 0
@@ -93,6 +95,68 @@ int main() {
           // [0] = Água _ [3] = Navio
 
         */
+
+        /////////////////////////////////////////////////////////////////////
+
+        //  ## Nível Mestre ## 
+
+    // Habilidade - Cone 
+        int cone[3][5] = {0}; 
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (j >= 2 - i && j <= 2 + i) {
+                    cone[i][j] = 1;
+                }
+            }
+        }
+
+        printf("Habilidade - Cone\n");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                printf("%d ", cone[i][j]);
+            }
+            printf("\n");
+        }
+
+        printf("\n");
+
+        // Habilidade - Cruz
+        int cruz[3][5] = {0};
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (i == 1 || j == 2) {
+                    cruz[i][j] = 1;
+                }
+            }
+        }
+
+        printf("Habilidade - Cruz\n");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                printf("%d ", cruz[i][j]);
+            }
+            printf("\n");
+        }
+
+        printf("\n");
+
+        // Habilidade - Octaedro
+        int octaedro[3][5] = {0};
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                if ((i == 1 && j >= 1 && j <= 3) || (i != 1 && j == 2)) {
+                    octaedro[i][j] = 1;
+                }
+            }
+        }
+
+        printf("Habilidade - Octaedro\n");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
+                printf("%d ", octaedro[i][j]);
+            }
+            printf("\n");
+        }
 
     return 0;
 }
